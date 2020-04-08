@@ -1,0 +1,11 @@
+/* 全局样式表 */
+* {
+    box-sizing: border-box;
+}
+html,body,#app {
+    height: 100%;
+}
+.van-checkbox__label {
+    color: #bbb;
+    font-size: 14px;
+}
