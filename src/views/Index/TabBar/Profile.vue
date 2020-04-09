@@ -59,7 +59,7 @@
           <van-icon name="arrow" />
         </div>
       </div>
-      <div class="subject">
+      <div class="subject" @click="logout">
           <div> <van-icon name="setting" color="#ccc" />
             <span style="margin-left:10px;">设置</span></div>
             <van-icon name="arrow" />
@@ -84,6 +84,12 @@ export default {
     },
     created() {
       this.hasToken = sessionStorage.getItem('token')
+    },
+    methods: {
+      logout() {
+        this.hasToken = ''
+        this.$toast('退出成功')
+      }
     },
 };
 </script>
